@@ -1,6 +1,13 @@
 #!/bin/bash
 # Script authored by Brian Knight, Knight InfoTek
 # This script monitors for stale NFS mounts and attempts to remount them if detected
+# 
+# Recommended crontab entry to run this script every 15 minutes:
+# */15 * * * * /path/to/nfs_watchdog.sh
+#
+# To add the crontab, use the following command:
+# crontab -e
+# Then, add the above line, making sure to replace "/path/to/nfs_watchdog.sh" with the actual script location.
 
 # Define the log file where NFS watchdog activity will be logged
 LOGFILE="/var/log/nfs_watchdog.log"
